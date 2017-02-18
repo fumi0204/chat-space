@@ -15,9 +15,8 @@ Details of database design of "chat-space" are as follows.
 | columm | type | not null | unique | index |
 |:-----------|------------:|:------------:|:------------:|:------------:|
 | name | string | true | true | true |
-| email | string | true | false | false |
 
-Association: has_many :groups, has_many : messages , has_many : group_user
+Association: has_many: groups, has_many: messages , through: :group_user
 
 ###Groups table
 
@@ -25,7 +24,7 @@ Association: has_many :groups, has_many : messages , has_many : group_user
 |:-----------|------------:|:------------:|:------------:|:------------:|
 | name | string | true | true | true |
 
-Association: has_many :users , has_many : messages ,has_many : group_user
+Association: has_many: users , has_many: messages , through: : group_user
 
 ###Group_user table
 
